@@ -1,9 +1,14 @@
 import { Button } from "@/components/ui/button"
 import { Github, Linkedin, Mail } from "lucide-react"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 export function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 py-20 bg-gradient-to-b from-background to-muted/20">
+    <section className="min-h-screen flex items-center justify-center px-4 py-20 bg-gradient-to-b from-background to-muted/20 relative">
+      <div className="absolute top-4 right-4 md:top-8 md:right-8">
+        <ThemeToggle />
+      </div>
+
       <div className="max-w-4xl mx-auto text-center space-y-8">
         <div className="space-y-4">
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-balance">Shannon Thomas</h1>
