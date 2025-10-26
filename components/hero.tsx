@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Github, Linkedin, Mail } from "lucide-react"
 import { ThemeToggle } from "@/components/theme-toggle"
+import Image from "next/image"
 
 export function Hero() {
   return (
@@ -10,6 +11,12 @@ export function Hero() {
       </div>
 
       <div className="max-w-4xl mx-auto text-center space-y-8">
+        <div className="flex justify-center mb-6">
+          <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden ring-4 ring-primary/20 shadow-xl">
+            <Image src="/images/profile.png" alt="Shannon Thomas" fill className="object-cover" priority />
+          </div>
+        </div>
+
         <div className="space-y-4">
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-balance">Shannon Thomas</h1>
           <p className="text-xl md:text-2xl text-muted-foreground font-mono">DevOps Engineer</p>
@@ -34,7 +41,7 @@ export function Hero() {
             </a>
           </Button>
           <Button asChild variant="outline" size="lg" className="gap-2 bg-transparent">
-            <a href="https://github.com/shannonthomas" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/Shanmeistro" target="_blank" rel="noopener noreferrer">
               <Github className="h-4 w-4" />
               GitHub
             </a>
