@@ -31,14 +31,20 @@ export function Education() {
             </div>
             <div className="space-y-4">
               {certifications.map((cert, index) => (
-                <div key={index} className="space-y-1 pb-4 border-b last:border-0 last:pb-0">
+                <div key={index} className={`space-y-1 pb-4 border-b last:border-0 last:pb-0 ${cert.title.includes("DevOps Engineer Expert") ? "bg-primary/10 border-primary" : ""}`}>
                   <Badge variant="secondary" className="mb-2">
                     {cert.year}
                   </Badge>
                   <p className="font-semibold leading-relaxed">{cert.title}</p>
                   <p className="text-sm text-muted-foreground">{cert.provider}</p>
+                  {cert.title.includes("DevOps Engineer Expert") && (
+                    <span className="text-xs text-primary font-bold">Azure DevOps Certification</span>
+                  )}
                 </div>
               ))}
+              <div className="pt-2">
+                <span className="text-xs text-muted-foreground">More certifications coming soon...</span>
+              </div>
             </div>
           </Card>
 

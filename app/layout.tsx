@@ -9,10 +9,16 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Shannon Thomas | DevOps Engineer",
+  title: "Shannon Thomas | DevOps Engineer & Full Stack Innovator",
   description:
-    "DevOps Engineer with 10+ years in IT. Microsoft Certified DevOps Engineer Expert specializing in Azure, CI/CD, containerization, and cloud platforms.",
-  generator: "v0.app",
+    "DevOps Engineer with 10+ years of experience through sysadmin into automation, CI/CD, cloud infrastructure, and full-stack development. Specializing in Azure, Kubernetes, Ansible, and Python.",
+  keywords: ["DevOps", "Azure", "Kubernetes", "CI/CD", "Ansible", "Python", "Full Stack", "Cloud Infrastructure"],
+  authors: [{ name: "Shannon Thomas" }],
+  openGraph: {
+    title: "Shannon Thomas | DevOps Engineer",
+    description: "DevOps Engineer specializing in automation, CI/CD, and cloud infrastructure",
+    type: "website",
+  },
 }
 
 export default function RootLayout({
@@ -21,9 +27,9 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className="scroll-smooth">
       <body className={`font-sans antialiased`}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
         </ThemeProvider>
         <Analytics />
