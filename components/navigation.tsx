@@ -18,10 +18,14 @@ export function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  const handleDownloadCV = () => {
+  const handleDownloadCV = (format: "pdf" | "docx") => {
+    const fileMap = {
+      pdf: "/docs/Shannon Thomas DevOps CV Modern.pdf",
+      docx: "/docs/Shannon Thomas DevOps CV Modern.docx",
+    }
     const link = document.createElement("a")
-    link.href = "/Shannon_Thomas_CV.txt"
-    link.download = "Shannon_Thomas_CV.txt"
+    link.href = fileMap[format]
+    link.download = format === "pdf" ? "Shannon_Thomas_CV.pdf" : "Shannon_Thomas_CV.docx"
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
@@ -60,9 +64,13 @@ export function Navigation() {
               </a>
             ))}
             <ThemeToggle />
-            <Button onClick={handleDownloadCV} size="sm" className="gap-2">
+            <Button onClick={() => handleDownloadCV("pdf")} size="sm" className="gap-2">
               <Download className="h-4 w-4" />
-              Download CV
+              Download CV (PDF)
+            </Button>
+            <Button onClick={() => handleDownloadCV("docx")} size="sm" className="gap-2">
+              <Download className="h-4 w-4" />
+              Download CV (DOCX)
             </Button>
           </div>
 
@@ -90,9 +98,13 @@ export function Navigation() {
               </a>
             ))}
             <ThemeToggle />
-            <Button onClick={handleDownloadCV} size="sm" className="w-full gap-2">
+            <Button onClick={() => handleDownloadCV("pdf")} size="sm" className="w-full gap-2">
               <Download className="h-4 w-4" />
-              Download CV
+              Download CV (PDF)
+            </Button>
+            <Button onClick={() => handleDownloadCV("docx")} size="sm" className="w-full gap-2">
+              <Download className="h-4 w-4" />
+              Download CV (DOCX)
             </Button>
           </div>
         )}
