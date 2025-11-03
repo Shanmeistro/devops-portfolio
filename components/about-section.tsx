@@ -8,7 +8,7 @@ import { Download, FileText } from "lucide-react"
 export function AboutSection() {
   const handleDownloadCV = (format: "pdf" | "docx") => {
     const fileMap = {
-      pdf: "/docs/Shannon Thomas DevOps CV Modern.docx.pdf",
+      pdf: "/docs/Shannon Thomas DevOps CV Modern.pdf",
       docx: "/docs/Shannon Thomas DevOps CV Modern.docx",
     }
     const link = document.createElement("a")

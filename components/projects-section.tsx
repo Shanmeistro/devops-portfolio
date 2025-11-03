@@ -7,27 +7,27 @@ export function ProjectsSection() {
   const projects = [
     {
       name: "DevOps GitOps Infra",
-      description: "Infrastructure as Code automation using Terraform and Ansible for streamlined deployment workflows",
-      technologies: ["Terraform", "Ansible", "GitOps", "IaC"],
-      github: "https://github.com/Shanmeistro",
+      description: "Production-ready Kubernetes manifests and ArgoCD configurations for deploying a Flask web application using GitOps principles.",
+      technologies: ["ArgoCD", "Kind", "GitHub Actions", "Grafana", "Docker", "Kubernetes"],
+      github: "https://github.com/Shanmeistro/devops-gitops-infra",
     },
     {
-      name: "GitOps Pipeline Demo",
-      description: "CI/CD workflow example integrating GitHub Actions and Kubernetes for automated deployments",
-      technologies: ["GitHub Actions", "Kubernetes", "CI/CD", "Docker"],
-      github: "https://github.com/Shanmeistro",
+      name: "DevOps GitOps Pipeline",
+      description: "Application source code and CI/CD pipeline for a comprehensive GitOps deployment demonstration using GitHub Actions, ArgoCD, and Kubernetes.",
+      technologies: ["ArgoCD", "GitHub Actions", "Kubernetes", "Python", "CI/CD", "Flask"],
+      github: "https://github.com/Shanmeistro/devops-gitops-pipeline",
     },
     {
       name: "Infra Provisioning Demo",
-      description: "Python + Terraform hybrid provisioning script for automated infrastructure setup",
-      technologies: ["Python", "Terraform", "Automation", "Cloud"],
-      github: "https://github.com/Shanmeistro",
+      description: "Automated infrastructure provisioning and configuration across AWS, Azure, and GCP using Terraform and Ansible.",
+      technologies: ["IaC", "Terraform", "Ansible", "AWS", "Azure", "GCP", "Azure DevOps", "Gitlab CI/CD"],
+      github: "https://github.com/Shanmeistro/infra-provisioning-demo",
     },
     {
       name: "Simple Shell",
-      description: "Bash utility collection for local automation and testing workflows",
-      technologies: ["Bash", "Shell Scripting", "Automation", "Linux"],
-      github: "https://github.com/Shanmeistro",
+      description: "A fully automated and customizable way to create a consistent, efficient, and personalized development environment on your local machine.",
+      technologies: ["Shell Scripting", "Automation", "Linux", "Bash", "Zsh", "DevOps"],
+      github: "https://github.com/Shanmeistro/simple-shell",
     },
   ]
 

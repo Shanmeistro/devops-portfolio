@@ -73,6 +73,7 @@ export function CertificationsSection() {
     "Certified Kubernetes Application Developer (CKAD)",
     "AWS Solutions Architect",
     "Google Cloud Professional Cloud Architect",
+    "CS50's Introduction to Computer Science",
   ]
 
   return (
